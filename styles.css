@@ -1,0 +1,141 @@
+body {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e !important;
+    color: #f9f9f9 !important;
+}
+
+textarea, input[type="file"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode textarea, body.dark-mode input[type="file"] {
+    background-color: #333 !important;
+    color: #f9f9f9 !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode input[type="file"]::file-selector-button {
+    background-color: #555 !important;
+    color: #f9f9f9 !important;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode input[type="file"]::file-selector-button:hover {
+    background-color: #777 !important;
+}
+
+/* Historia konwersji */
+#conversion-history {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+body.dark-mode #conversion-history {
+    background-color: #333 !important;
+    border: 1px solid #555 !important;
+}
+
+#conversion-history .list-group-item {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.dark-mode #conversion-history .list-group-item {
+    background-color: #333 !important;
+    color: #f9f9f9 !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode #conversion-history .list-group-item:hover {
+    background-color: #444 !important;
+}
+
+body.dark-mode #conversion-history .list-group-item button {
+    background-color: #555 !important;
+    color: #f9f9f9 !important;
+    border: none;
+}
+
+body.dark-mode #conversion-history .list-group-item button:hover {
+    background-color: #777 !important;
+}
+
+button.btn-outline-secondary {
+    color: #333;
+    border-color: #333;
+}
+
+button.btn-outline-secondary:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+header.navbar {
+    background-color: #f8f9fa;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode header.navbar {
+    background-color: #212529 !important;
+    color: #f9f9f9;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode header.navbar button#toggle-theme {
+    color: #f9f9f9;
+    border-color: #f9f9f9;
+    background-color: transparent;
+}
+
+body.dark-mode header.navbar button#toggle-theme:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode header.navbar a.navbar-brand {
+    color: #f9f9f9 !important;
+}
+
+#main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+body.dark-mode #main-title {
+    color: #f9f9f9;
+}
+
+#main-description {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+body.dark-mode #main-description {
+    color: #e0e0e0 !important;
+}
+
+footer {
+    font-size: 0.9rem;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border-top: 1px solid #ddd;
+}
+
+body.dark-mode footer {
+    background-color: #212529 !important;
+    color: #f9f9f9 !important;
+    border-top: 1px solid #444;
+}

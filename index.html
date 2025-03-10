@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator JSON na Ren'Py</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="ikona.png" alt="Logo" width="30" height="30" class="me-2">
+            Translator JSON na Ren'Py
+        </a>
+        <div>
+            <button id="toggle-theme" class="btn btn-outline-secondary btn-sm">
+                <i id="theme-icon" class="bi bi-moon"></i> Ciemny motyw
+            </button>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h2 id="main-title">Konwerter JSON na Ren'Py</h2>
+            <p id="main-description">Szybko i łatwo konwertuj swoje dane JSON na skrypty Ren'Py.</p>
+        </div>
+        <div class="mb-4">
+            <h5>1. Wprowadź lub załaduj plik JSON</h5>
+            <textarea id="input-json" class="form-control mb-3" rows="8"></textarea>
+            <input type="file" id="file-input" class="form-control mb-3" accept=".json" onchange="handleFileUpload(event)">
+            <div class="d-flex gap-2">
+                <button onclick="clearJsonInput()" class="btn btn-secondary">Wyczyść JSON</button>
+                <button onclick="resetFileInput()" class="btn btn-danger">Wyczyść wybór pliku</button>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <button onclick="processJson()" class="btn btn-primary btn-lg">Konwertuj na Ren'Py</button>
+        </div>
+        <div class="mb-4">
+            <h5>2. Wynik</h5>
+            <textarea id="output-renpy" class="form-control mb-3" rows="8"></textarea>
+            <div class="d-flex gap-2">
+                <button onclick="clearOutput()" class="btn btn-secondary">Wyczyść wynik</button>
+                <button onclick="downloadOutput()" class="btn btn-success">Pobierz skrypt Ren'Py</button>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h5>3. Historia konwersji</h5>
+            <ul id="conversion-history" class="list-group"></ul>
+            <button onclick="clearAllHistory()" class="btn btn-danger btn-sm mt-3">Wyczyść historię</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="processJson.js"></script>
+    <script src="themeToggle.js"></script>
+</body>
+<footer class="bg-light text-center text-muted py-3 mt-4">
+    © Translator JSON na Ren'Py - Paweł Beńkowski
+</footer>
+</html>
